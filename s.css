@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text color for readability */
+}
+
+.container {
+    max-width: 800px; /* Maximum width for larger screens */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Add padding */
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+.product{
+    text-align: center;
+    color: blue;
+    text-shadow: 2px 2px 2px #12A0FF;
+}
+
+/* Title styling */
+h1 {
+    text-align: center; /* Center the title */
+    color: black; /* Green color x*/
+    margin-bottom: 20px; /* Space below the title */
+    text-shadow: 1px 1px 2px #007BFF;
+}
+
+/* Navigation links styling */
+.nav-links {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the links */
+    margin-bottom: 20px; /* Space below the links */
+    font-size: 20px;
+}
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text color */
+    background-color: #007BFF; /* Bootstrap blue color */
+    padding: 10px 15px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    margin: 0 10px; /* Space between links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.nav-links a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+#add-product-form{
+    display: flex; /* Aligns child elements in a row */
+    gap: 10px; /* Adds space between the elements */
+    align-items: center; /* Centers elements vertically */
+    justify-content: center; /* Center the links */
+    max-width: 800px;
+}
+
+/* Styling for inputs and button */
+#add-product-form input,
+#add-product-form button {
+    padding: 8px; /* Adds padding for better appearance */
+    font-size: 16px; /* Increases font size for readability */
+    border: 1px solid #ccc; /* Adds a light border */
+    border-radius: 4px; /* Adds slightly rounded corners */
+}
+
+/* From Uiverse.io by adamgiebl */
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(
+            0deg,
+            rgba(20, 167, 62, 1) 0%,
+            rgba(102, 247, 113, 1) 100%
+    );
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+}
+
+.cssbuttons-io-button svg {
+    margin-right: 6px;
+}
+
+.cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+}
+
+.cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+}
+
+
+
+/* Product list styling */
+#product-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+#product-list li {
+    background-color: #f8f9fa; /* Light background for list items */
+    margin: 10px 0; /* Space between list items */
+    padding: 10px; /* Padding for list items */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between item text and price */
+}
+
+
+.user-checkboxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.user-checkbox{
+    margin-left: 20px;
+}
+
+input#checkbox: checked + .user-checkbox {
+    font-weight: bold;
+}
+
+/* Checkbox and label styling */
+.user-checkbox input[type="checkbox"] {
+    margin-right: 8px; /* Add space between checkbox and label */
+    cursor: pointer; /* Pointer cursor for better UX */
+}
+
+.user-checkbox label {
+    font-weight: normal; /* Default label text weight */
+    font-style: italic;
+    cursor: pointer; /* Pointer cursor for better UX */
+}
+
+.user-checkbox input[type="checkbox"]:checked + label {
+    font-weight: bold; /* Bold text for checked labels */
+    color: blue;
+    font-style: normal;
+}
+
+span{
+    font-weight: bold;
+    text-decoration: underline;
+    color: red;
+    text-shadow: 0.5px 0.5px 1px blue ;
+
+}
+
+
+
+
+.button-mod {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m15.5 16.9l1.4-1.4q.15-.15.15-.35t-.15-.35l-3.4-3.425q.1-.275.15-.55t.05-.625q0-1.425-1.012-2.437T10.25 6.75q-.275 0-.525.025t-.5.125Q9 7 8.95 7.25t.125.425l1.85 1.85l-1.4 1.4l-1.85-1.85Q7.5 8.9 7.25 8.95t-.35.275q-.075.25-.113.5t-.037.525q0 1.425 1.013 2.438T10.2 13.7q.325 0 .613-.05t.562-.15l3.425 3.4q.15.15.35.15t.35-.15M12 22q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.button-del {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='m12 13.4l2.9 2.9q.275.275.7.275t.7-.275t.275-.7t-.275-.7L13.4 12l2.9-2.9q.275-.275.275-.7t-.275-.7t-.7-.275t-.7.275L12 10.6L9.1 7.7q-.275-.275-.7-.275t-.7.275t-.275.7t.275.7l2.9 2.9l-2.9 2.9q-.275.275-.275.7t.275.7t.7.275t.7-.275zm0 8.6q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+/* Total price styling */
+#total-price {
+    font-size: 1.5em; /* Larger font size */
+    margin-top: 20px; /* Space above total price */
+    text-align: left; /* Align text to the right */
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 1px 1px yellowgreen;
+    text-decoration: underline green;
+
+}

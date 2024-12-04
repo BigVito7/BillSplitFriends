@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Product List</title>
+
+</head>
+<body>
+<div class="container">
+  <h1>User Management</h1>
+  <div class="nav-links">
+    <a href="index.html">Products</a>
+<!--    <a href="users.html">Manage Users</a>-->
+  </div>
+  <form id="add-user-form">
+    <input type="text" id="username" placeholder="Username" required>
+    <input type="number" id="user-amount" placeholder="Amount" step="0.01" required>
+    <button type="submit">Add User</button>
+  </form>
+  <ul id="user-list"></ul>
+  <div id="totals"></div>
+</div>
+
+<script src="users.js"></script>
+</body>
+</html>

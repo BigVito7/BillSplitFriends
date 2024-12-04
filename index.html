@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="s.css">
+
+    <title>Bill Splitter with Cumatri</title>
 </head>
+
 <body>
-$END$
+
+<div class="container">
+    <h1>Product List</h1>
+    <div class="nav-links">
+<!--        <a href="index.html">Products</a>-->
+        <a href="users.html">Users</a>
+    </div>
+    <form id="add-product-form">
+        <input type="text" id="product-name" placeholder="Product name" required>
+        <input type="number" id="product-price" placeholder="Price" step="0.01" required>
+        <button type="submit">Add Product</button>
+    </form>
+    <ul id="product-list"></ul>
+    <div id="total-price"></div>
+</div>
+<script src="index.js"></script>
 </body>
+
+
 </html>

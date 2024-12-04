@@ -1,0 +1,190 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333; /* Dark text color for readability */
+}
+
+/* Main container styling */
+.container {
+    max-width: 800px; /* Maximum width for larger screens */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Add padding */
+    background-color: #ffffff; /* White background for the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Title styling */
+h1 {
+    text-align: center; /* Center the title */
+    color: #4CAF50; /* Green color */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Navigation links styling */
+.nav-links {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the links */
+    margin-bottom: 20px; /* Space below the links */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff; /* White text color */
+    background-color: #007BFF; /* Bootstrap blue color */
+    padding: 10px 15px; /* Padding for buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
+    margin: 0 10px; /* Space between links */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Form styling */
+form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center align items */
+}
+
+ Input fields styling
+input[type="text"],
+input[type="number"] {
+    padding: 10px; /* Padding for input fields */
+    margin-bottom: 15px; /* Space between inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Full width */
+}
+
+/* Button styling */
+button {
+    display: flex; /* Use flexbox for button layout */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Padding for button */
+    background-color: #007BFF; /* Change button color to blue */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin: 15px 0; /* Space around the button */
+    width: 100%; /* Full width for long button */
+    justify-content: center; /* Center content */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* SVG icon styling */
+button svg {
+    margin-left: 5px; /* Space between text and icon */
+    fill: white; /* Icon color */
+}
+
+/* Product list styling */
+#product-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+}
+
+#product-list li {
+    background-color: #f8f9fa; /* Light background for list items */
+    margin: 10px 0; /* Space between list items */
+    padding: 10px; /* Padding for list items */
+    border-radius: 5px; /* Rounded corners */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between item text and price */
+}
+
+/* Total price styling */
+#total-price {
+    font-size: 1.5em; /* Larger font size */
+    margin-top: 20px; /* Space above total price */
+    text-align: right; /* Align text to the right */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column; /* Stack links vertically on small screens */
+    }
+
+    .nav-links a {
+        margin: 5px 0; /* Space between links */
+    }
+
+    /*input[type="text"],*/
+    /*input[type="number"],*/
+    /*button {*/
+    /*    width: 100%; !* Full width on small screens *!*/
+    /*}*/
+}
+
+.user-sum {
+    font-weight: bold;
+    color: #007bff;
+}
+.user-amount {
+    font-weight: bold;
+    color: #28a745;
+}
+.user-difference {
+    font-weight: bold;
+    color: #dc3545;
+}
+    .button-mod {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button-del {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+
+/* Styling for the form to align elements in one row */
+#add-product-form {
+    display: flex; /* Aligns child elements in a row */
+    gap: 10px; /* Adds space between the elements */
+    align-items: center; /* Centers elements vertically */
+}
+
+/* Styling for inputs and button */
+#add-product-form input,
+#add-product-form button {
+    padding: 8px; /* Adds padding for better appearance */
+    font-size: 16px; /* Increases font size for readability */
+    border: 1px solid #ccc; /* Adds a light border */
+    border-radius: 4px; /* Adds slightly rounded corners */
+}
+
+#add-product-form button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Removes border for the button */
+    cursor: pointer; /* Adds pointer cursor on hover */
+}
+
+#add-product-form button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}

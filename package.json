@@ -1,5 +1,5 @@
 {
-  "name": "${PROJECT_NAME}",
+  "name": "BillSplitFriends",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
