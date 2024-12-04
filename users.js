@@ -33,14 +33,14 @@ function renderUsers() {
         const li = document.createElement('li');
         li.className = 'user-item';
         li.innerHTML = `
-            <span>${user.username} 
+            <span class="name">${user.username} 
                 <span class="user-sum">(You eat: $${userSum.toFixed(2)})</span>
                 <span class="user-amount">(You spent already: $${userAmount.toFixed(2)})</span>
                 <span class="user-difference">(You have to pay: $${difference.toFixed(2)*(-1)})</span>
             </span>
             <div>
                 <button class="button-mod" onclick="modifyUser('${user.username}')">Modify</button>
-                <button class="button-mod" onclick="deleteUser('${user.username}')">Delete</button>
+                <button class="button-del" onclick="deleteUser('${user.username}')">Delete</button>
             </div>
         `;
         userList.appendChild(li);
@@ -50,8 +50,8 @@ function renderUsers() {
     const totalAmounts = users.reduce((sum, user) => sum + (user.amount || 0), 0); // Обеспечиваем, что `user.amount` не `undefined`
 
     totalsDiv.innerHTML = `
-        <p>Subtotal (sum of all users): $${subtotal.toFixed(2)}</p>
-        <p>Total user amounts: $${totalAmounts.toFixed(2)}</p>
+        <p class="bill">The Bill: $${subtotal.toFixed(2)}</p>
+        <p class = "bank">Users Bank: $${totalAmounts.toFixed(2)}</p>
     `;
 }
 
