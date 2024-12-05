@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0cad6d4-a65c-4e11-ac01-fc04a6c3d962" name="Changes" comment="Add git link">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="b0cad6d4-a65c-4e11-ac01-fc04a6c3d962" name="Changes" comment="Readme.md updated with picture" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,6 +62,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BigVito\WebstormProjects\BillSplitFriends\picture" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -86,7 +88,7 @@
       <workItem from="1733353414612" duration="116000" />
       <workItem from="1733353608215" duration="3107000" />
       <workItem from="1733400821554" duration="1613000" />
-      <workItem from="1733407342882" duration="862000" />
+      <workItem from="1733407342882" duration="1007000" />
     </task>
     <task id="LOCAL-00001" summary="Product list CSS finish">
       <option name="closed" value="true" />
@@ -128,7 +130,23 @@
       <option name="project" value="LOCAL" />
       <updated>1733402446172</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Readme.md updated with picture">
+      <option name="closed" value="true" />
+      <created>1733408272036</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733408272036</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Readme.md updated with picture">
+      <option name="closed" value="true" />
+      <created>1733408348958</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733408348958</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +167,7 @@
     <MESSAGE value="Product list CSS finish" />
     <MESSAGE value="User list CSS finish" />
     <MESSAGE value="Add git link" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add git link" />
+    <MESSAGE value="Readme.md updated with picture" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme.md updated with picture" />
   </component>
 </project>
