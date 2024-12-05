@@ -7,16 +7,16 @@ And the results you can find per each user in User Management page, how much eac
 
 Instruction:
 1. In page "Products" creat product and it's cost.
-![Image](Product.PNG)
+![Image](picture/Product.PNG)
 
 
 2. In page "Users" creat users and how much he spend.
-   ![Image](Users.PNG)
+   ![Image](picture/Users.PNG)
 
 
 3. Then go back to page "Products" and select what product did user X consume.
-   ![Image](ProductSelect.PNG)
+   ![Image](picture/ProductSelect.PNG)
 
 
 4. After this, in page "Users", you can see how much each of user must pay for that what he eat or drink.
-   ![Image](UsersBill.PNG)
+   ![Image](picture/UsersBill.PNG)
