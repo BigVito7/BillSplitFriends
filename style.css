@@ -59,7 +59,9 @@ h1 {
     align-items: center; /* Centers elements vertically */
     justify-content: center; /* Center the links */
     max-width: 800px;
+    height: 55px;
 }
+
 
 /* Styling for inputs and button */
 #add-product-form input,
@@ -168,6 +170,8 @@ button {
 
 .user-checkboxes{
     display: flex;
+    flex-wrap: wrap; /* Позволяет содержимому переноситься */
+    gap: 8px; /* Пространство между чекбоксами */
     justify-content: center;
     align-items: center;
     padding: 10px;
@@ -184,7 +188,7 @@ input#checkbox: checked + .user-checkbox {
 
 /* Checkbox and label styling */
 .user-checkbox input[type="checkbox"] {
-    margin-right: 8px; /* Add space between checkbox and label */
+    margin-right: 1px; /* Add space between checkbox and label */
     cursor: pointer; /* Pointer cursor for better UX */
 }
 
@@ -264,6 +268,8 @@ span{
     align-items: center; /* Centers elements vertically */
     justify-content: center; /* Center the links */
     max-width: 800px;
+    height: 55px;
+    margin-bottom: 15px;
 }
 
 /* Styling for inputs and button */
@@ -280,20 +286,20 @@ span{
     width: 50%;
 }
 
-.user-sum {
+.user-sum, #eat {
     font-weight: normal;
     color: #007bff;
-    margin-left: 5px;
+    margin-left: 0.5px;
 }
-.user-amount {
+.user-amount, #spent {
     font-weight: normal;
     color: #28a745;
-    margin-left: 5px;
+    margin-left: 0.5px;
 }
-.user-difference {
+.user-difference, #diff {
     font-weight: bold;
     color: #dc3545;
-    margin-left: 5px;
+    margin-left: 0.5px;
 }
 
 .user-item{
@@ -309,12 +315,17 @@ span{
     text-shadow: #00fcff 1px 1px 1px;
     font-weight: bolder;
     font-style: italic;
+
 }
 
 .bill,
 .bank{
     font-weight: bold;
     font-size: 16px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .footer{
@@ -345,4 +356,190 @@ span{
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
 
+}
+
+
+.lang{
+    height: 10px;
+    display: flex;
+    align-items: center; /* Align vertically */
+    justify-content: right;
+}
+
+.language{
+   font-weight: normal;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.flag-button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+.flag-button img {
+    width: 30px;
+    height: 20px;
+}
+
+#eat, .money0{
+    font-weight: normal;
+    color: #007bff;
+    margin-left: 0.5px;
+
+
+}
+#spent, .money1{
+    font-weight: normal;
+    color: #28a745;
+    margin-left: 0.5px;
+}
+#diff, .money2{
+    font-weight: bold;
+    color: #dc3545;
+    margin-left: 0.5px;
+}
+.money{
+    font-size: 12px;
+}
+.money0{
+    font-size: 14px;
+}
+.money1{
+    font-size: 14px;
+}
+.money2{
+    font-size: 14px;
+}
+
+#eat{
+    font-weight: normal;
+    color: #007bff;
+    margin-left: 5px;
+    font-size: 14px;
+    text-shadow: 0.5px 0.5px 1px blue ;
+}
+#spent{
+        font-weight: normal;
+        color: whitegreen;
+        margin-left: 5px;
+        text-shadow: 0.5px 0.5px 1px blue ;
+    font-size: 14px;
+}
+#diff{
+    font-weight: bold;
+    color: red;
+    margin-left: 5px;
+    text-shadow: 0.5px 0.5px 1px blue ;
+    font-size: 14px;
+}
+
+.difference{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+td.actions {
+    text-align: right; /* Выравнивание содержимого вправо */
+    padding-right: 2px; /* Отступ справа */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 10%;
+}
+
+td {
+    text-align: left; /* Центрируем содержимое остальных ячеек */
+
+    border: 0.5px solid black;
+}
+
+td:last-child {
+    width: 60px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-align: center;
+}
+
+.usernamefont{
+    font-weight: bold;
+    width: 100px;
+
+
+}
+tr{
+    min-width: 760px;
+
+    overflow-x: auto;
+    border-collapse: collapse; /* Убираем промежутки между ячейками */
+    table-layout: fixed; /* Устанавливаем фиксированную ширину столбцов */
+}
+
+ul#user-list{
+
+}
+
+.eat1, spent2, diff2{
+    min-width: 760px;
+}
+td.eat1{
+    min-width: 200px;
+}
+
+td.spent2{
+    min-width: 200px;
+}
+td.diff2{
+    min-width: 200px;
+}
+
+@media screen and (max-width: 800px) {
+    td.eat1 {
+        min-width: 185px;
+    }
+
+    td.spent2 {
+        min-width: 185px;
+    }
+
+    td.diff2 {
+        min-width: 185px;
+    }
+    .eat1, spent2, diff2{
+        min-width: 400px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    td.eat1 {
+        min-width: 170px;
+    }
+
+    td.spent2 {
+        min-width: 170px;
+    }
+
+    td.diff2 {
+        min-width: 170px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    td.eat1 {
+        min-width: auto;
+    }
+
+    td.spent2 {
+        min-width: auto;
+    }
+
+    td.diff2 {
+        min-width: auto;
+    }
+
+}
+
+.container1{
+    marign-left: 1px;
 }

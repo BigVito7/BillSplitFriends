@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b0cad6d4-a65c-4e11-ac01-fc04a6c3d962" name="Changes" comment="Readme.md updated with picture">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/Product.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/picture/Product.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/ProductSelect.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/picture/ProductSelect.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/Users.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/picture/Users.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picture/UsersBill.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/picture/UsersBill.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/users.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +100,11 @@
       <workItem from="1733353608215" duration="3107000" />
       <workItem from="1733400821554" duration="1613000" />
       <workItem from="1733407342882" duration="1007000" />
-      <workItem from="1733408406173" duration="45000" />
+      <workItem from="1733408406173" duration="771000" />
+      <workItem from="1733471644134" duration="17482000" />
+      <workItem from="1733593344798" duration="41000" />
+      <workItem from="1733736926160" duration="1574000" />
+      <workItem from="1733740413185" duration="32812000" />
     </task>
     <task id="LOCAL-00001" summary="Product list CSS finish">
       <option name="closed" value="true" />
@@ -157,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733408446936</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Readme.md updated with picture">
+      <option name="closed" value="true" />
+      <created>1733408500432</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733408500432</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

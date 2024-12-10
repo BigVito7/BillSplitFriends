@@ -1,13 +1,79 @@
+// Инициализация данных из LocalStorage
 let users = JSON.parse(localStorage.getItem('users')) || [];
 let products = JSON.parse(localStorage.getItem('products')) || [];
+let currentLanguage = localStorage.getItem('currentLanguage') || 'en'; // Язык по умолчанию - английский
 
-// Сохраняет данные в LocalStorage
+// Объект переводов для разных языков
+const translations = {
+    en: {
+        title: 'User Management',
+        additem: 'Add user',
+        userpager: 'Product',
+        eat: "Consumption:",
+        spent: "Add to bank:",
+        diff: "To be paid:",
+        placeholders: {
+            usersName: 'Username',
+            usersPrice: 'Spent',
+        },
+        currency: '$',
+        currency1: '$',
+        totalCost: 'Total usage:',
+    },
+    md: {
+        title: 'Lista persoanelor',
+        additem: 'Adauga persoana',
+        userpager: 'Persoane',
+        eat: "Consumat:",
+        spent: "Cheltuit:",
+        diff: "De platit:",
+        placeholders: {
+            usersName: 'Numele',
+            usersPrice: 'Cheltuit',
+        },
+        currency: 'LEI',
+        currency1: 'LEI',
+        totalCost: 'Cost total:',
+    },
+    ru: {
+        title: 'Список пользователей',
+        additem: 'Добавить пользователя',
+        userpager: 'Продукты',
+        eat: "Употребил:",
+        spent: "Потратил:",
+        diff: "К оплате:",
+        placeholders: {
+            usersName: 'Имя пользователя',
+            usersPrice: 'Затраты',
+        },
+        currency: 'RUB',
+        currency1: 'RUB',
+        totalCost: 'Общая стоимость:',
+    },
+    de: {
+        title: 'Benutzerliste',
+        additem: 'Benutzer hinzufügen',
+        userpager: 'Produkte',
+        eat: "Verbrauch:",
+        spent: "Gegeben:",
+        diff: "Bezahlung:",
+        placeholders: {
+            usersName: 'Benutzername',
+            usersPrice: 'Kosten',
+        },
+        currency: '€',
+        currency1: '€',
+        totalCost: 'Gesamtkosten:',
+    },
+};
+
+// Сохраняет данные пользователей и продуктов в LocalStorage
 function saveData() {
     localStorage.setItem('users', JSON.stringify(users));
     localStorage.setItem('products', JSON.stringify(products));
 }
 
-// Рассчитывает долю пользователя за товары
+// Рассчитывает долю пользователя за продукты
 function calculateUserSum(username) {
     return products.reduce((sum, product) => {
         if (product.users && product.users.includes(username)) {
@@ -20,45 +86,81 @@ function calculateUserSum(username) {
 // Отображает список пользователей
 function renderUsers() {
     const userList = document.getElementById('user-list');
-    userList.innerHTML = '';
+    userList.innerHTML = ''; // Очистить таблицу перед добавлением новых данных
+
     let subtotal = 0;
 
     users.forEach(user => {
         const userSum = calculateUserSum(user.username);
-        const userAmount = user.amount || 0; // Обеспечиваем, что `user.amount` не `undefined`
+        const userAmount = user.amount || 0; // Убедимся, что значение не undefined
         const difference = userAmount - userSum;
 
         subtotal += userSum;
 
-        const li = document.createElement('li');
-        li.className = 'user-item';
-        li.innerHTML = `
-            <span class="name">${user.username} 
-                <span class="user-sum">(You eat: $${userSum.toFixed(2)})</span>
-                <span class="user-amount">(You spent already: $${userAmount.toFixed(2)})</span>
-                <span class="user-difference">(You have to pay: $${difference.toFixed(2)*(-1)})</span>
-            </span>
-            <div>
+        // Создаем строку таблицы
+        const row = document.createElement('tr');
+
+        // Добавляем ячейки с данными
+        row.innerHTML = `
+            <td class="usernamefont">${user.username}</td>
+            <td class="eat1">
+                <span id="eat">${translations[currentLanguage].eat}</span>
+                <span class="user-sum">${userSum.toFixed(2)}</span>
+                <span class="money0">${translations[currentLanguage].currency}</span>
+            </td>
+            <td class="spent2">
+                <span id="spent">${translations[currentLanguage].spent}</span>
+                <span class="user-amount">${userAmount.toFixed(2)}</span>
+                <span class="money1">${translations[currentLanguage].currency}</span>
+            </td>
+            <td class="diff2">
+                <span id="diff">${translations[currentLanguage].diff}</span>
+                <span class="user-difference" style="color: ${difference < 0 ? 'red' : 'green'};">
+                    ${(difference * -1).toFixed(2)}
+                </span>
+                <span class="money2">${translations[currentLanguage].currency}</span>
+            </td>
+            <td class="actions">
                 <button class="button-mod" onclick="modifyUser('${user.username}')">Modify</button>
                 <button class="button-del" onclick="deleteUser('${user.username}')">Delete</button>
-            </div>
+            </td>
         `;
-        userList.appendChild(li);
+
+        // Добавляем строку в таблицу
+        userList.appendChild(row);
     });
 
     const totalsDiv = document.getElementById('totals');
-    const totalAmounts = users.reduce((sum, user) => sum + (user.amount || 0), 0); // Обеспечиваем, что `user.amount` не `undefined`
+    const totalAmounts = users.reduce((sum, user) => sum + (user.amount || 0), 0);
+    let difference = subtotal - totalAmounts;
 
+    // Проверяем разницу
+    let differenceText = `You still don't have enough money to pay the bill: ${(difference * -1).toFixed(2)} ${translations[currentLanguage].currency1}`;
+    let differenceColor = difference <= 0 ? 'green' : 'red'; // Green for <=0, Red for >0
+
+    if (difference <= 0) {
+        differenceText = `In bank you have sufficient money to pay the bill (${(difference * -1).toFixed(2)} ${translations[currentLanguage].currency1})`;
+    }
+
+    // Обновляем отображение итогов
     totalsDiv.innerHTML = `
-        <p class="bill">The Bill: $${subtotal.toFixed(2)}</p>
-        <p class = "bank">Users Bank: $${totalAmounts.toFixed(2)}</p>
+        <p class="bill">The Bill: ${subtotal.toFixed(2)} ${translations[currentLanguage].currency1}</p>
+        <p class="bank">Users Bank: ${totalAmounts.toFixed(2)} ${translations[currentLanguage].currency1}</p>
+        <p class="difference" style="color: ${differenceColor};">${differenceText}</p>
     `;
 }
 
+
+
+
 // Добавляет нового пользователя
 function addUser(username, amount) {
+    if (!username || isNaN(amount)) {
+        alert('Invalid username or amount.');
+        return;
+    }
     if (!users.some(u => u.username === username)) {
-        users.push({ username, amount: parseFloat(amount) || 0 }); // Убедимся, что `amount` всегда число
+        users.push({ username, amount: parseFloat(amount) || 0 });
         saveData();
         renderUsers();
     } else {
@@ -66,7 +168,9 @@ function addUser(username, amount) {
     }
 }
 
-// Модифицирует данные пользователя
+console.log('Users:', users);
+
+// Модифицирует данные существующего пользователя
 function modifyUser(oldUsername) {
     const user = users.find(u => u.username === oldUsername);
     const newUsername = prompt('Enter new username:', oldUsername);
@@ -108,20 +212,65 @@ function deleteUser(username) {
     }
 }
 
-// Добавляет обработчик события для формы
-document.getElementById('add-user-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const usernameInput = document.getElementById('username');
-    const amountInput = document.getElementById('user-amount');
-    const username = usernameInput.value.trim();
-    const amount = parseFloat(amountInput.value) || 0; // Убедимся, что `amount` всегда число
+// Сохраняет текущий язык в LocalStorage
+function saveLanguage(lang) {
+    localStorage.setItem('currentLanguage', lang);
+}
 
-    if (username) {
-        addUser(username, amount);
-        usernameInput.value = '';
-        amountInput.value = '';
-    }
+// Применяет текущий язык ко всем элементам интерфейса
+function applyLanguage() {
+    const translation = translations[currentLanguage];
+    document.getElementById('title').textContent = translation.title;
+    document.getElementById('additem').textContent = translation.additem;
+    document.getElementById('userpager').textContent = translation.userpager;
+
+    updateUserLanguage(); // Обновляет текст строк пользователей
+    renderUsers();
+}
+
+// Обновляет текст для всех пользователей в соответствии с текущим языком
+function updateUserLanguage() {
+    const userItems = document.querySelectorAll('.user-item');
+
+    userItems.forEach(item => {
+        const eat = item.querySelector('#eat');
+        const spent = item.querySelector('#spent');
+        const diff = item.querySelector('#diff');
+
+        if (eat) eat.textContent = translations[currentLanguage].eat;
+        if (spent) spent.textContent = translations[currentLanguage].spent;
+        if (diff) diff.textContent = translations[currentLanguage].diff;
+    });
+}
+
+// Добавляет обработчик смены языка
+document.addEventListener('DOMContentLoaded', function () {
+    const flagButtons = document.querySelectorAll('.flag-button');
+    flagButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            currentLanguage = button.getAttribute('data-language');
+            saveLanguage(currentLanguage);
+            applyLanguage();
+        });
+    });
+
+    applyLanguage(); // Применяет язык при загрузке
 });
 
-// Инициализирует начальный рендер
-renderUsers();
+document.getElementById('add-user-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Предотвращаем перезагрузку страницы при отправке формы
+
+    const usernameInput = document.getElementById('users-name'); // Поле для имени пользователя
+    const amountInput = document.getElementById('users-price'); // Поле для суммы
+
+    const username = usernameInput.value.trim(); // Извлекаем имя пользователя
+    const amount = parseFloat(amountInput.value); // Извлекаем сумму и преобразуем в число
+
+    if (username && !isNaN(amount)) {
+        addUser(username, amount); // Вызываем функцию добавления пользователя
+        usernameInput.value = ''; // Очищаем поле имени пользователя
+        amountInput.value = '';   // Очищаем поле суммы
+    } else {
+        alert('Please enter a valid username and amount!'); // Сообщение об ошибке
+    }
+});

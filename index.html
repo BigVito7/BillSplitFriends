@@ -6,21 +6,40 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Bill Splitter with Cumatri</title>
+<!--    <title data-i18n="title">Bill Splitter with Cumatri</title>    language select-->
 </head>
-
 <body>
+<header>
+
+</header>
 
 <div class="container">
-    <h1>Product List</h1>
+<div class="lang">
+
+    <div>
+        <button class="flag-button" data-language="en">
+            <img src="https://flagcdn.com/us.svg" alt="English">
+        </button>
+        <button class="flag-button" data-language="md">
+            <img src="https://flagcdn.com/md.svg" alt="Moldoveneasca">
+        </button>
+        <button class="flag-button" data-language="ru">
+            <img src="https://flagcdn.com/ru.svg" alt="Россия">
+        </button>
+        <button class="flag-button" data-language="de">
+            <img src="https://flagcdn.com/de.svg" alt="Deutsch">
+        </button>
+    </div>
+</div>
+
+    <h1 id="title">Product List</h1>
     <div class="nav-links">
-<!--        <a href="index.html">Products</a>-->
-        <a href="users.html">Users</a>
+        <a id="userpager" href="users.html">Persons</a>
     </div>
     <form id="add-product-form">
         <input type="text" id="product-name" placeholder="Product name" required>
         <input type="number" id="product-price" placeholder="Price" step="0.01" required>
-        <button class = "myButton" type="submit">Add Item</button>
-
+        <button id="additem" class = "myButton" type="submit">Add Item</button>
 
     </form>
     <ul id="product-list"></ul>
