@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0cad6d4-a65c-4e11-ac01-fc04a6c3d962" name="Changes" comment="money update and table settings" />
+    <list default="true" id="b0cad6d4-a65c-4e11-ac01-fc04a6c3d962" name="Changes" comment="money update and table settings">
+      <change beforePath="$PROJECT_DIR$/picture/Product.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/picture/Product.PNG" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +96,7 @@
       <workItem from="1733593344798" duration="41000" />
       <workItem from="1733736926160" duration="1574000" />
       <workItem from="1733740413185" duration="33034000" />
+      <workItem from="1733826820106" duration="351000" />
     </task>
     <task id="LOCAL-00001" summary="Product list CSS finish">
       <option name="closed" value="true" />
@@ -175,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733826688892</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="money update and table settings">
+      <option name="closed" value="true" />
+      <created>1733826833875</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733826833875</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
