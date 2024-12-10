@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b0cad6d4-a65c-4e11-ac01-fc04a6c3d962" name="Changes" comment="Readme.md updated with picture">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/Product.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/picture/Product.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/ProductSelect.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/picture/ProductSelect.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/Users.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/picture/Users.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/picture/UsersBill.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/picture/UsersBill.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/users.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/users.js" afterDir="false" />
-    </list>
+    <list default="true" id="b0cad6d4-a65c-4e11-ac01-fc04a6c3d962" name="Changes" comment="money update and table settings" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +93,7 @@
       <workItem from="1733471644134" duration="17482000" />
       <workItem from="1733593344798" duration="41000" />
       <workItem from="1733736926160" duration="1574000" />
-      <workItem from="1733740413185" duration="32812000" />
+      <workItem from="1733740413185" duration="33034000" />
     </task>
     <task id="LOCAL-00001" summary="Product list CSS finish">
       <option name="closed" value="true" />
@@ -178,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733408500432</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="money update and table settings">
+      <option name="closed" value="true" />
+      <created>1733826688892</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733826688892</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +197,7 @@
     <MESSAGE value="User list CSS finish" />
     <MESSAGE value="Add git link" />
     <MESSAGE value="Readme.md updated with picture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Readme.md updated with picture" />
+    <MESSAGE value="money update and table settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="money update and table settings" />
   </component>
 </project>
