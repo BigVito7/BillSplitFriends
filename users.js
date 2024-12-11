@@ -19,6 +19,10 @@ const translations = {
         currency: '$',
         currency1: '$',
         totalCost: 'Total usage:',
+        bigbill: 'The Bill:',
+        bigbank: 'Users Bank:',
+        dont: 'You still don\'t have enough money to pay the bill: ',
+        have: 'In bank you have sufficient money to pay the bill: ',
     },
     md: {
         title: 'Lista persoanelor',
@@ -34,6 +38,10 @@ const translations = {
         currency: 'LEI',
         currency1: 'LEI',
         totalCost: 'Cost total:',
+        bigbill: 'Nota de plata:',
+        bigbank: 'Banca utilizatorilor:',
+        dont: 'Încă nu aveți suficienți bani pentru a plăti factura: ',
+        have: 'În bancă aveți suficienți bani pentru a plăti factura: ',
     },
     ru: {
         title: 'Список пользователей',
@@ -49,6 +57,10 @@ const translations = {
         currency: 'RUB',
         currency1: 'RUB',
         totalCost: 'Общая стоимость:',
+        bigbill: 'Счет на оплату',
+        bigbank: 'Банк пользователей:',
+        dont: 'У вас все еще недостаточно денег, чтобы оплатить счет: ',
+        have: 'В банке у вас достаточно денег, чтобы оплатить счет: ',
     },
     de: {
         title: 'Benutzerliste',
@@ -64,6 +76,10 @@ const translations = {
         currency: '€',
         currency1: '€',
         totalCost: 'Gesamtkosten:',
+        bigbill: 'Die Rechnung:',
+        bigbank: 'Benutzerbank:',
+        dont: 'Ihr Geld reicht noch immer nicht, um die Rechnung zu bezahlen: ',
+        have: 'Auf der Bank haben Sie genügend Geld, um die Rechnung zu bezahlen: ',
     },
 };
 
@@ -134,21 +150,19 @@ function renderUsers() {
     const totalAmounts = users.reduce((sum, user) => sum + (user.amount || 0), 0);
     let difference = subtotal - totalAmounts;
 
-    // Проверяем разницу
-    let differenceText = `You still don't have enough money to pay the bill: ${(difference * -1).toFixed(2)} ${translations[currentLanguage].currency1}`;
-    let differenceColor = difference <= 0 ? 'green' : 'red'; // Green for <=0, Red for >0
-
-    if (difference <= 0) {
-        differenceText = `In bank you have sufficient money to pay the bill (${(difference * -1).toFixed(2)} ${translations[currentLanguage].currency1})`;
-    }
-
     // Обновляем отображение итогов
     totalsDiv.innerHTML = `
-        <p class="bill">The Bill: ${subtotal.toFixed(2)} ${translations[currentLanguage].currency1}</p>
-        <p class="bank">Users Bank: ${totalAmounts.toFixed(2)} ${translations[currentLanguage].currency1}</p>
-        <p class="difference" style="color: ${differenceColor};">${differenceText}</p>
+        <p class="bill" id="bigbill">${translations[currentLanguage].bigbill} ${subtotal.toFixed(2)} ${translations[currentLanguage].currency1}</p>
+        <p class="bank" id="bigbank">${translations[currentLanguage].bigbank} ${totalAmounts.toFixed(2)} ${translations[currentLanguage].currency1}</p>
+        <p class="difference" style="color: ${difference > 0 ? 'red' : 'green'};">
+            <span id="${difference > 0 ? 'dont' : 'have'}">
+                ${difference > 0 ? translations[currentLanguage].dont : translations[currentLanguage].have} 
+            </span>
+            ${(difference * -1).toFixed(2)} ${translations[currentLanguage].currency1} 
+        </p>
     `;
 }
+
 
 
 
@@ -224,8 +238,19 @@ function applyLanguage() {
     document.getElementById('additem').textContent = translation.additem;
     document.getElementById('userpager').textContent = translation.userpager;
 
+    // Обновляем текст для итогов, если они существуют
+    const bigBillElement = document.getElementById('bigbill');
+    const bigBankElement = document.getElementById('bigbank');
+    const dontElement = document.getElementById('dont');
+    const haveElement = document.getElementById('have');
+
+    if (bigBillElement) bigBillElement.textContent = `${translation.bigbill} ${bigBillElement.textContent.split(':')[1]}`;
+    if (bigBankElement) bigBankElement.textContent = `${translation.bigbank} ${bigBankElement.textContent.split(':')[1]}`;
+    if (dontElement) dontElement.textContent = translation.dont;
+    if (haveElement) haveElement.textContent = translation.have;
+
     updateUserLanguage(); // Обновляет текст строк пользователей
-    renderUsers();
+    renderUsers(); // Перерисовывает интерфейс
 }
 
 // Обновляет текст для всех пользователей в соответствии с текущим языком

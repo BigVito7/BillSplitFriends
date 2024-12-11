@@ -543,3 +543,14 @@ td.diff2{
 .container1{
     marign-left: 1px;
 }
+
+#have{
+    color: green;
+    text-shadow: yellow 0.5px 0.5px 0.5px;
+    margin-right: 5px;
+}
+#dont{
+    color: red;
+    text-shadow: yellow 0.5px 0.5px 0.5px;
+    margin-right: 5px;
+}
