@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0cad6d4-a65c-4e11-ac01-fc04a6c3d962" name="Changes" comment="add link on netlify">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +99,7 @@
       <workItem from="1733826820106" duration="595000" />
       <workItem from="1733916309296" duration="6214000" />
       <workItem from="1735293132975" duration="125000" />
-      <workItem from="1735293344046" duration="330000" />
+      <workItem from="1735293344046" duration="418000" />
     </task>
     <task id="LOCAL-00001" summary="Product list CSS finish">
       <option name="closed" value="true" />
@@ -214,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735293249377</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add link on netlify">
+      <option name="closed" value="true" />
+      <created>1735293687180</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1735293687180</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

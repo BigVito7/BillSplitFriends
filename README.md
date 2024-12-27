@@ -1,5 +1,5 @@
 Hi,
-<a>
+<p></p>
 This is my app, where you can split the bill between friends in restaurant, party outside or at home.
 First, add product list that you bought and the price per each product (food, drinks).
 Then you go to Users page and creat the user who was at the party and (if he bought something) write amount of money that he spend (if he spent nothing, then write "0")
@@ -13,7 +13,7 @@ Instruction:
 ![Image](picture/Product.PNG)
 
 
-2. In page "Users" create users and how much he consume.
+2. In page "Users" create users and how much he/she consume.
    ![Image](picture/Users.PNG)
 
 
