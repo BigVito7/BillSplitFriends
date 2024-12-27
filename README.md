@@ -5,6 +5,8 @@ Then you go to Users page and creat the user who was at the party and (if he bou
 After this you need to go to product list page and each user have to select the product that he eat or drink.
 And the results you can find per each user in User Management page, how much each have to pay (or add to the bank if it was a party outside or at home).
 
+website: <b>https://friendlysplitter.netlify.app</b>
+
 Instruction:
 1. In page "Products" creat product and it's cost.
 ![Image](picture/Product.PNG)
