@@ -1,4 +1,5 @@
-<b>BILL SPLITTER<b>
+<b>BILL SPLITTER</b>
+<p></p>
 Hi,
 <p></p>
 This is my app, where you can split the bill between friends in restaurant, party outside or at home.
