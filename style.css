@@ -463,10 +463,11 @@ td:last-child {
 
 .usernamefont{
     font-weight: bold;
+    font-style: italic;      /* Курсив */
     width: 100px;
-
-
+    text-align: center;      /* Центрирование текста */
 }
+
 tr{
     min-width: 760px;
 
